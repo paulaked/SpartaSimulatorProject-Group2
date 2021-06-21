@@ -6,6 +6,7 @@ def time_counter(t):
         years, months = divmod(t, 12)
         timer = '{:02d}:{:02d}'.format(years, months)
         print(timer, end="\r")
+        print(t)
         time.sleep(1)
         t -= 1
 
