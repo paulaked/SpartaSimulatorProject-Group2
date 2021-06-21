@@ -6,11 +6,11 @@ class ProjectTest(unittest.TestCase):
     
         
     def testacademylessthan100(self):
-        self.assertLessEqual(30, 100)
+        self.assertLessEqual(len(time_function.in_training), 100)
         
         
     def testisint(self):
-        self.assertIsInstance(time_function.t, int)
+        self.assertIsInstance(int(time_function.t), int)
         
         
     def testnumberofstudents(self):
