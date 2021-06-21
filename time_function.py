@@ -1,30 +1,46 @@
 import time
 from random import randint
+import random
 
 
 def time_counter(t):
+
+    centre = {"London", "Birmingham", "Leeds", "Glasgow", "Aberdeen", "Manchester", "Edinburgh", "Newcastle",
+              "Liverpool", "Cardiff", "Bristol", "Nottingham", "Sheffield", "Leicester", "York", "Portsmouth",
+              "Cambridge",
+              "Exeter", "Plymouth", "Norwich", "Oxford", "Aberystwyth", "Cardiff",
+              "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch", "Torquay", "Coventry", "Blackpool",
+              "Chester"}
+
     waiting_list = []
     identification = 1
-    in_training = []
+    training_academies = {}
     while t != 0:
         years, months = divmod(t, 12)
         timer = '{:02d}:{:02d}'.format(years, months)
         print(timer, end="\r")
-        print(t)
         time.sleep(1)
-        x = 0
         new_people = randint(20, 30)
-        attend_centre = randint(0, 20)
+        if t % 2 == 0:
+            random_centre = random.choice(list(centre))
+            training_academies[random_centre] = 0
+            centre.remove(random_centre)
         for i in range(0, new_people):
             waiting_list.append(identification)
             identification += 1
         print(new_people)
-        for x in range(0, attend_centre):
-            into_training = waiting_list.pop(0)
-            in_training.append(into_training)
-        print(attend_centre)
+        for random_centre in training_academies:
+            for x in range(0, randint(0, 20)):
+                if training_academies[random_centre] >= 100:
+                    print(f"{random_centre} has reached full capacity!")
+                    break
+                if len(waiting_list) >= 1:
+
+                    waiting_list.pop(0)
+
+                training_academies[random_centre] += 1
         print(waiting_list)
-        print(in_training)
+        print(training_academies)
         t -= 1
     print("The time simulation is over")
 
