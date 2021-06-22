@@ -1,9 +1,10 @@
-from new_centre import new_centre
-from into_academy import leave_waiting_list
 import time
 from random import randint
-from into_academy import waiting_list
+from new_centre import new_centre
 from new_centre import training_academies
+from into_academy import leave_waiting_list
+from into_academy import waiting_list
+from into_academy import full_centres
 
 while True:
      #ensures that value can be inted
@@ -37,4 +38,11 @@ while t != 0:
     print(training_academies)
     print(waiting_list)
     t -= 1
+    
+trainees_at_each_centre = training_academies.values()
+total_trainees = sum(trainees_at_each_centre)
 print("The simulation is over.")
+print(f"The total number of open centres is {len(training_academies.keys())}")
+print(f"The total number of full centres is {len(full_centres)}")
+print(f"The total number of trainees currently in training is {total_trainees}")
+print(f"The total number of trainees on the waiting list is {len(waiting_list)}")
