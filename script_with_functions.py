@@ -12,6 +12,7 @@ identification = 1
 while t != 0:
     years, months = divmod(t, 12)
     timer = '{:02d}:{:02d}'.format(years, months)
+    time.sleep(1)
     new_people = randint(20, 30)
     if t % 2 == 0:
         new_centre()
