@@ -4,8 +4,13 @@ from new_centre import training_academies
 from into_academy import leave_waiting_list
 from into_academy import waiting_list
 from into_academy import full_centres
+from Sparta_Acdemy_Simulation.Config_File.User_Input import *
 
-length_simulation = int(input("Enter the time in months for the programme to run: "))
+if number_of_months != 0:
+    length_simulation = number_of_months
+else:
+
+    length_simulation = int(input("Enter the time in months for the programme to run: "))
 identification = 1
 
 while length_simulation != 0:
