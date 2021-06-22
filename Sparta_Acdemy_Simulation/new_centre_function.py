@@ -1,5 +1,5 @@
 import random
-from dict_centres import centre
+from Initial_Code.centres_config import centre
 
 training_academies = {}
 
