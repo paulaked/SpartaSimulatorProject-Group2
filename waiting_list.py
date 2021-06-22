@@ -1,6 +1,5 @@
 # Create a waiting list.
 
-
 # Using python lists we can implement a waiting list.
 class WaitingList:
 

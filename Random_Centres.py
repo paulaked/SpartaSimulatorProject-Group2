@@ -6,5 +6,3 @@ centre = {"London", "Birmingham", "Leeds", "Glasgow", "Aberdeen", "Manchester", 
 
 random_centre = random.choice(list(centre))
 print(random_centre)
-
-
