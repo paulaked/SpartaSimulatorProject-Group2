@@ -5,7 +5,7 @@ from new_centre import training_academies
 from into_academy import leave_waiting_list
 from into_academy import waiting_list
 from into_academy import full_centres
-from Config_Files.user_input import number_of_months
+from Config_FIles.user_input import *
 
 if number_of_months != 0:
     length_simulation = number_of_months
@@ -26,7 +26,6 @@ while length_simulation != 0:
     print(new_people)
     print(waiting_list)
     leave_waiting_list()
-    print(into_training)
     print(waiting_list)
     print(training_academies)
     length_simulation -= 1

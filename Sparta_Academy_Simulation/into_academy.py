@@ -9,6 +9,7 @@ def leave_waiting_list():
 
     for random_centre in training_academies:
         into_training = randint(0, 20)
+        print(into_training)
         for x in range(0, into_training):
             if training_academies[random_centre] >= 100:
                 break

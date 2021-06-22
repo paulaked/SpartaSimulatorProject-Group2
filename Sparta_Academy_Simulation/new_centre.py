@@ -1,6 +1,5 @@
 import random
-from Config_Files.centres_config import centre_config
-
+from Config_FIles.centre_config import centre_config
 training_academies = {}
 
 
