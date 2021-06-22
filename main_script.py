@@ -41,7 +41,6 @@ def time_counter(t):
                     training_academies[random_centre] += 1
                 if len(waiting_list) == 0:
                     break
-
         print(training_academies)
         print(waiting_list)
         t -= 1
