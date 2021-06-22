@@ -25,13 +25,9 @@ def time_counter(t):
             try:
                 random_centre = random.choice(list(centre))
                 training_academies[random_centre] = 0
+                centre.remove(random_centre)
             except IndexError:
                 pass
-            finally:
-                pass
-           
-            try:
-                centre.remove(random_centre)
             except KeyError:
                 pass
         for i in range(0, new_people):
@@ -42,6 +38,8 @@ def time_counter(t):
             for x in range(0, randint(0, 20)):
                 if training_academies[random_centre] >= 100:
                     print(f"{random_centre} has reached full capacity!")
+                    break
+                if len(waiting_list) == 0:
                     break
                 if len(waiting_list) >= 1:
 
