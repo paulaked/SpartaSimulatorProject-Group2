@@ -28,16 +28,18 @@ def time_counter(t):
         for i in range(0, new_people):
             waiting_list.append(identification)
             identification += 1
+        print(waiting_list)
         print(new_people)
         for random_centre in training_academies:
-            for x in range(0, randint(0, 20)):
+            into_training = randint(0, 20)
+            for x in range(0, into_training):
                 if training_academies[random_centre] >= 100:
                     print(f"{random_centre} has reached full capacity!")
                     break
+                if len(waiting_list) == 0:
+                    break
                 if len(waiting_list) >= 1:
-
                     waiting_list.pop(0)
-
                 training_academies[random_centre] += 1
         print(waiting_list)
         print(training_academies)
