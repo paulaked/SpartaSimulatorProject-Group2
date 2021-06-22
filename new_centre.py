@@ -1,6 +1,8 @@
 import random
 from dict_centres import centre
 
+training_academies = {}
+
 
 def new_centre():
 
