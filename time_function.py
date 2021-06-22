@@ -24,11 +24,12 @@ def time_counter(t):
         if t % 2 == 0:
             try:
                 random_centre = random.choice(list(centre))
+                training_academies[random_centre] = 0
             except IndexError:
                 pass
             finally:
                 pass
-            training_academies[random_centre] = 0
+           
             try:
                 centre.remove(random_centre)
             except KeyError:
