@@ -1,5 +1,5 @@
 import random
-from Sparta_Academy_Simulation.Config_FIles.centres_config import centre_config
+from Config_Files.centres_config import centre_config
 
 training_academies = {}
 

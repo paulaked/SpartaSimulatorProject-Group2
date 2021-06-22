@@ -1,10 +1,11 @@
+import time
 from random import randint
 from new_centre import new_centre
 from new_centre import training_academies
 from into_academy import leave_waiting_list
 from into_academy import waiting_list
 from into_academy import full_centres
-from Sparta_Academy_Simulation.Config_FIles.user_input import number_of_months
+from Config_Files.user_input import number_of_months
 
 if number_of_months != 0:
     length_simulation = number_of_months
@@ -15,13 +16,19 @@ identification = 1
 while length_simulation != 0:
     years, months = divmod(length_simulation, 12)
     timer = '{:02d}:{:02d}'.format(years, months)
+    time.sleep(0.5)
     new_people = randint(20, 30)
     if length_simulation % 2 == 0:
         new_centre()
     for each_person in range(0, new_people):
         waiting_list.append(identification)
         identification += 1
+    print(new_people)
+    print(waiting_list)
     leave_waiting_list()
+    print(into_training)
+    print(waiting_list)
+    print(training_academies)
     length_simulation -= 1
 trainees_at_each_centre = training_academies.values()
 total_trainees = sum(trainees_at_each_centre)
