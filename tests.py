@@ -1,25 +1,29 @@
 import unittest
-import time_function
+from random import randint
+from script_with_functions import t, new_people
+from into_academy import leave_waiting_list
+from new_centre import training_academies
+from dict_centres import centre
 
 
 class ProjectTest(unittest.TestCase):
     
         
     def testacademylessthan100(self):
-        self.assertLessEqual(len(time_function.in_training), 100)
+        self.assertLessEqual(training_academies["London"], 100)
         
         
     def testisint(self):
-        self.assertIsInstance(int(time_function.t), int)
+        self.assertIsInstance(t, int)
         
         
     def testnumberofstudents(self):
-        self.assertGreaterEqual(21, 20)
-        self.assertLessEqual(21, 30)
+        self.assertGreaterEqual(new_people, 20)
+        self.assertLessEqual(new_people, 30)
         
         
     def testclasssize(self):
-        self.assertLessEqual(15, 20)
+        self.assertLessEqual(leave_waiting_list(), 20)
         
         
 if __name__ == '__main__':

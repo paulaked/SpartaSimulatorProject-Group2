@@ -19,3 +19,4 @@ def leave_waiting_list():
                 break
             if training_academies[random_centre] == 100:
                 full_centres.append(training_academies[random_centre])
+    return into_training
