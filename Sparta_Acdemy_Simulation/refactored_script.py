@@ -1,10 +1,10 @@
 import time
 from random import randint
-from Initial_Code.new_centre import new_centre
-from Initial_Code.new_centre import training_academies
-from Initial_Code.into_academy import leave_waiting_list
-from Initial_Code.into_academy import waiting_list
-from Initial_Code.into_academy import full_centres
+from Sparta_Acdemy_Simulation.Initial_Code.new_centre import new_centre
+from Sparta_Acdemy_Simulation.Initial_Code.new_centre import training_academies
+from Sparta_Acdemy_Simulation.Initial_Code.into_academy import leave_waiting_list
+from Sparta_Acdemy_Simulation.Initial_Code.into_academy import waiting_list
+from Sparta_Acdemy_Simulation.Initial_Code.into_academy import full_centres
 
 t = int(input("Enter the time in months for the programme to run: "))
 identification = 1

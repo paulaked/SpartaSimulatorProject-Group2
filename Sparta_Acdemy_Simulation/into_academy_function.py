@@ -1,5 +1,5 @@
 from random import randint
-from Initial_Code.new_centre import training_academies
+from Sparta_Acdemy_Simulation.Initial_Code.new_centre import training_academies
 
 waiting_list = []
 full_centres = []
