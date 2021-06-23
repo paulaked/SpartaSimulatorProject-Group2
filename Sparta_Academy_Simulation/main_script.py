@@ -16,18 +16,18 @@ identification = 1
 while length_simulation != 0:
     years, months = divmod(length_simulation, 12)
     timer = '{:02d}:{:02d}'.format(years, months)
-    time.sleep(0.5)
+    time.sleep(1)
     new_people = randint(20, 30)
     if length_simulation % 2 == 0:
         new_centre()
     for each_person in range(0, new_people):
         waiting_list.append(identification)
         identification += 1
-    print(new_people)
-    print(waiting_list)
+    print(f"This is the number of new people that wish to be trained: {new_people}")
+    print(f"This is the waiting list with these new people added to it:\n{waiting_list}")
     leave_waiting_list()
-    print(waiting_list)
-    print(training_academies)
+    print(f"These are the training academies that are currently running:\n {training_academies}")
+    print(f"This is the waiting list after the academy intake that month:\n{waiting_list}")
     length_simulation -= 1
 trainees_at_each_centre = training_academies.values()
 total_trainees = sum(trainees_at_each_centre)
